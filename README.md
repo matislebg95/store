@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a student project that challenges me in web development. 
 
-Things you may want to cover:
+This project aims to be a comprehensive website that allows the user to buy, create, edit and delete products, create an account and follow the user hierarchy. 
 
-* Ruby version
+The objectives of this project are:
+– Learning Ruby on Rails by creating a simple website
+– First version of the website
+– Automated deployment
+– Learning a more advanced front-end tool
+– Adding a feature requiring complex front-end interactions (e.g., a real-time chat)
+– Adding a feature requiring a third-party backend tool (e.g., advanced search with typo corrections, tags, facets, custom sorting, etc.)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
