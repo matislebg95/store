@@ -1,0 +1,15 @@
+<%= form_with model: product, html: { class: "form-container" } do |form| %>
+
+  <div class="container">
+    <%= form.text_field :name, class: "input", required: true %>
+    </br> </br>
+    <%= form.label :name, class: "label" %>
+    </br> </br>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
+
