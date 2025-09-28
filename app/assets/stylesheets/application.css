@@ -21,7 +21,7 @@ a:not(:has(img)), a img, button, input, .style_button  {
 a img {
     padding: 0px;
 }
-a:not(:has(img)):hover, a img:hover, button:hover, input:hover, .style_button:active  {
+a:not(:has(img)):hover, a img:hover, button:hover, input:hover, .style_button:hover  {
     box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
     color: #ffffff;
     border: 2px solid #272727;
