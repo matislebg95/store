@@ -6,70 +6,28 @@ body {
     background-color: #303030;
     padding: 40px;
 }
-a:not(:has(img))  {
+a:not(:has(img)), a img, button, input, .style_button  {
     display: inline-block;
     padding: 16px 16px;
     border-radius: 20px;
     border: 2px solid #2c2c2c;
     color: #dddddd;
-    text-decoration: none;
-    box-shadow:  -3px -3px 6px #101010, 3px 3px 6px #505050;
-    transition:  all 0.3s ease-out;
-}
-a:not(:has(img)):hover {
-    box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
-    color: #ffffff;
-    border: 2px solid #272727;
-    transform: scale(1.02);
-}
-a:not(:has(img)):active {
-    box-shadow: -3px -3px 6px #1e1e1e, 3px 3px 6px #424242;
-    transform: scale(0.9);
-    border: 2px solid #303030;
-}
-
-a img {
-    display: inline-block;
-    padding: 0px;
-    border-radius: 20px;
-    border: 2px solid #2c2c2c;
-    color: #dddddd;
-    text-decoration: none;
-    box-shadow:  -3px -3px 6px #101010, 3px 3px 6px #505050;
-    transition:  all 0.3s ease-out;
-}
-a img:hover {
-    box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
-    color: #ffffff;
-    border: 2px solid #272727;
-    transform: scale(1.02);
-}
-
-a img:active {
-    box-shadow: -3px -3px 6px #1e1e1e, 3px 3px 6px #424242;
-    transform: scale(0.9);
-    border: 2px solid #303030;
-}
-
-button {
     background-color: #303030;
     font-size: 18px;
-    display: inline-block;
-    padding: 16px 16px;
-    border-radius: 20px;
-    border: 2px solid #2c2c2c;
-    color: #dddddd;
     text-decoration: none;
     box-shadow:  -3px -3px 6px #101010, 3px 3px 6px #505050;
-    transition:  all 0.3s ease-out;
+    transition:  all 0.2s ease-out;
 }
-button:hover {
+a img {
+    padding: 0px;
+}
+a:not(:has(img)):hover, a img:hover, button:hover, input:hover, .style_button:active  {
     box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
     color: #ffffff;
     border: 2px solid #272727;
     transform: scale(1.02);
 }
-button:active {
+a:not(:has(img)):active, a img:active, button:active, input:active, .style_button:active  {
     box-shadow: -3px -3px 6px #1e1e1e, 3px 3px 6px #424242;
     transform: scale(0.9);
     border: 2px solid #303030;
@@ -79,29 +37,6 @@ img {
     display: inline-block;
     padding: 0px;
     border-radius: 20px;
-}
-
-input {
-    background-color: #303030;
-    font-size: 18px;
-    display: inline-block;
-    padding: 16px 16px;
-    border-radius: 20px;
-    border: 2px solid #2c2c2c;
-    color: #dddddd;
-    text-decoration: none;
-    box-shadow:  -3px -3px 6px #101010, 3px 3px 6px #505050;
-    transition:  all 0.3s ease-out;
-}
-input:hover {
-    box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
-    color: #ffffff;
-    border: 2px solid #272727;
-}
-input:active {
-    box-shadow: -3px -3px 6px #1e1e1e, 3px 3px 6px #424242;
-    transform: scale(0.9);
-    border: 2px solid #303030;
 }
 
 .container {
@@ -137,7 +72,7 @@ input:active {
     color: #dddddd;
     background-color: transparent;
     box-shadow:  -3px -3px 6px #101010, 3px 3px 6px #505050;
-    transition:  all 0.3s ease-in-out;
+    transition:  all 0.2s ease-in-out;
 }
 
 .input:hover {
@@ -153,6 +88,7 @@ input:active {
     3px 3px 6px #606060,
     inset -3px -3px 10px rgba(0, 0, 0, 0.38),
     inset 1px 1px 6px rgba(255, 255, 255, 0.15);
+    transform: scale(1);
 }
 
 .container .input:valid ~ .label,
