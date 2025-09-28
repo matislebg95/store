@@ -2,10 +2,17 @@
 
   <div class="container">
     <%= form.text_field :name, class: "input", required: true %>
-    </br> </br>
+    <br/> <br/>
     <%= form.label :name, class: "label" %>
-    </br> </br>
+    <br/> <br/>
   </div>
+
+  <div>
+    <%= form.label :featured_image, style: "display: block" %>
+    <%= form.file_field :featured_image, accept: "image/*" %>
+  </div>
+
+  <br/> <br/>
 
   <div>
     <%= form.submit %>

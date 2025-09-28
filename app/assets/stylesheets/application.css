@@ -6,7 +6,7 @@ body {
     background-color: #303030;
     padding: 40px;
 }
-a {
+a:not(:has(img))  {
     display: inline-block;
     padding: 16px 16px;
     border-radius: 20px;
@@ -16,12 +16,36 @@ a {
     box-shadow:  -3px -3px 6px #101010, 3px 3px 6px #505050;
     transition:  all 0.3s ease-out;
 }
-a:hover {
+a:not(:has(img)):hover {
     box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
     color: #ffffff;
     border: 2px solid #272727;
+    transform: scale(1.02);
 }
-a:active {
+a:not(:has(img)):active {
+    box-shadow: -3px -3px 6px #1e1e1e, 3px 3px 6px #424242;
+    transform: scale(0.9);
+    border: 2px solid #303030;
+}
+
+a img {
+    display: inline-block;
+    padding: 0px;
+    border-radius: 20px;
+    border: 2px solid #2c2c2c;
+    color: #dddddd;
+    text-decoration: none;
+    box-shadow:  -3px -3px 6px #101010, 3px 3px 6px #505050;
+    transition:  all 0.3s ease-out;
+}
+a img:hover {
+    box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
+    color: #ffffff;
+    border: 2px solid #272727;
+    transform: scale(1.02);
+}
+
+a img:active {
     box-shadow: -3px -3px 6px #1e1e1e, 3px 3px 6px #424242;
     transform: scale(0.9);
     border: 2px solid #303030;
@@ -43,11 +67,18 @@ button:hover {
     box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
     color: #ffffff;
     border: 2px solid #272727;
+    transform: scale(1.02);
 }
 button:active {
     box-shadow: -3px -3px 6px #1e1e1e, 3px 3px 6px #424242;
     transform: scale(0.9);
     border: 2px solid #303030;
+}
+
+img {
+    display: inline-block;
+    padding: 0px;
+    border-radius: 20px;
 }
 
 input {
