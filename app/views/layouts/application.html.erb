@@ -23,6 +23,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav style="position: absolute; top: 0; left: 0; width: 95%; padding: 20px; margin: 0;  display: flex; gap: 5%; justify-content: stretch; ">
+      <%= link_to "Accueil", root_path, style: "display: block; text-align: center; flex:2 ;" %>
+      <%= link_to "Produits", products_path, style: "display: block; text-align: center; flex:2 ;" %>
+    </nav>
+
+  <%= yield %>
   </body>
 </html>
