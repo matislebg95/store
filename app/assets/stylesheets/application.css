@@ -20,8 +20,11 @@ a:not(:has(img)), a img, button, input, .style_button  {
     transition:  all 0.2s ease-out;
 }
 a img {
-    padding: 0px;
-    width: 300px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
 }
 a:not(:has(img)):hover, a img:hover, button:hover, input:hover, .style_button:hover  {
     box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
@@ -39,7 +42,7 @@ img {
     display: inline-block;
     padding: 0px;
     border-radius: 20px;
-    width: 400px;
+    width: 600px;
 }
 
 .container {
