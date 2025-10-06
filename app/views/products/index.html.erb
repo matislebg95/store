@@ -3,11 +3,11 @@
 <%= link_to "New product", new_product_path %>
 <br/> <br/>
 
-<div id="products" style="display: flex; flex-wrap: wrap; gap: 20px;">
+<div id="products" style="display: flex; flex-wrap: wrap; gap: 40px;">
   <% @products.each do |product| %>
     <div>
       <% if product.featured_image.attached? %>
-        <h2> <%= product.name %> <%= price_in_euros(product.price_in_cents) %>  </h2>
+        <h2> <%= product.name %> <%= number_to_currency(product.price_in_cents.to_f / 100, locale: :fr) %>  </h2>
         <%= link_to product do %>
           <%= image_tag product.featured_image, alt: product.name %>
         <% end %>
