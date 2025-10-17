@@ -25,18 +25,25 @@ a img {
     height: 400px;
     object-fit: cover;
     object-position: center;
+    box-shadow:  -6px -6px 12px #101010, 6px 6px 12px #505050;
     padding: 0;
 }
 a:not(:has(img)):hover, a img:hover, button:hover, input:hover, .style_button:hover  {
     box-shadow: -3px -3px 6px #000000, 3px 3px 6px #606060;
     color: #ffffff;
     border: 2px solid #272727;
-    transform: scale(1.02);
+    transform: scale(1.04);
+}
+a img:hover{
+    box-shadow:  -6px -6px 12px #000000, 6px 6px 12px #606060;
 }
 a:not(:has(img)):active, a img:active, button:active, input:active, .style_button:active  {
     box-shadow: -3px -3px 6px #1e1e1e, 3px 3px 6px #424242;
     transform: scale(0.9);
     border: 2px solid #303030;
+}
+a img:active{
+    box-shadow:  -6px -6px 12px #1e1e1e, 6px 6px 12px #424242;
 }
 
 img {
@@ -74,7 +81,7 @@ img {
     line-height: 45px;
     border: 2px solid #2c2c2c;
     outline: none;
-    padding: 4px 0px 12px 16px;
+    padding: 4px 16px 12px 16px;
     border-radius: 20px;
     color: #dddddd;
     background-color: transparent;
@@ -111,4 +118,25 @@ img {
     3px 3px 6px #606060,
     inset -3px -3px 10px rgba(0, 0, 0, 0.38),
     inset 1px 1px 6px rgba(255, 255, 255, 0.15);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    padding: 1%;
+    margin: 0;
+    display: flex;
+    gap: 2%;
+    justify-content: stretch;
+}
+
+nav a, nav form {
+    display: block;
+    text-align: center;
+    flex: 1;
+}
+nav form button {
+    width: 100%;
 }

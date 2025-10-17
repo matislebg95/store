@@ -23,11 +23,15 @@
   </head>
 
   <body>
-    <nav style="position: absolute; top: 0; left: 0; width: 97%; padding: 1%; margin: 0;  display: flex; gap: 2%; justify-content: stretch; ">
-      <%= link_to "Home", root_path, style: "display: block; text-align: center; flex:1 ;" %>
-      <%= link_to "Products", products_path, style: "display: block; text-align: center; flex:1 ;" %>
+    <nav>
+      <%= link_to "Home", root_path %>
+      <%= link_to "Products", products_path %>
+      <%= link_to "Login", new_session_path unless authenticated? %>
+      <%= button_to "Log out", session_path, method: :delete if authenticated? %>
     </nav>
 
-  <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
