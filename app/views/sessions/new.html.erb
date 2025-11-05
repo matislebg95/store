@@ -8,14 +8,14 @@
 <%= form_with url: session_path, html: { class: "form-container" } do |form| %>
 
   <div class="container">
-    <%= form.email_field :email_address, class: "input", required: true, autofocus: true, autocomplete: "username", value: params[:email_address] %><br>
+    <%= form.email_field :email_address, class: "input", required: true, autofocus: true, autocomplete: "username", value: params[:email_address] %><br/>
     <%= form.label :email_address, class: "label" %>
   </div>
 
   <br/>
 
   <div class="container">
-    <%= form.password_field :password, class: "input", required: true, autocomplete: "current-password", maxlength: 72 %><br>
+    <%= form.password_field :password, class: "input", required: true, autocomplete: "current-password", maxlength: 72 %><br/>
     <%= form.label :password, class: "label" %>
   </div>
 

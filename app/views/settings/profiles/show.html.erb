@@ -1,0 +1,30 @@
+<h1>Profile</h1>
+
+<%= form_with model: Current.user, url: settings_profile_path do |form| %>
+  <% if form.object.errors.any? %>
+    <div>Error: <%= form.object.errors.full_messages.first %></div>
+  <% end %>
+
+  <br/>
+
+  <div class="container">
+    <%= form.text_field :first_name, class: "input", required: true, autocomplete: "given-name" %>
+    <br/>
+    <%= form.label :first_name, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div class="container">
+    <%= form.text_field :last_name, class: "input", required: true, autocomplete: "family-name" %>
+    <br/>
+    <%= form.label :last_name, class: "label" %>
+  </div>
+
+  <br/>
+
+
+  <div class="container">
+    <%= form.submit "Update profile" %>
+  </div>
+<% end %>

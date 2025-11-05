@@ -1,0 +1,53 @@
+<h1>Sign Up</h1>
+
+<%= form_with model: @user, url: sign_up_path, html: { class: "form-container" }  do |form| %>
+  <% if form.object.errors.any? %>
+    <div>Error: <%= form.object.errors.full_messages.first %></div>
+  <% end %>
+
+  <br/>
+
+  <div class="container">
+    <%= form.text_field :first_name, class: "input", required: true, autofocus: true, autocomplete: "given-name" %>
+    <br/>
+    <%= form.label :first_name, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div class="container">
+    <%= form.text_field :last_name, class: "input", required: true, autocomplete: "family-name" %>
+    <br/>
+    <%= form.label :last_name, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div class="container">
+    <%= form.email_field :email_address, class: "input", required: true, autocomplete: "email" %>
+    <br/>
+    <%= form.label :email_address, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div class="container">
+    <%= form.password_field :password, class: "input", required: true, autocomplete: "new-password" %>
+    <br/>
+    <%= form.label :password, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div class="container">
+    <%= form.password_field :password_confirmation, class: "input", required: true, autocomplete: "new-password" %>
+    <br/>
+    <%= form.label :password_confirmation, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div class="container">
+    <%= form.submit "Sign up" %>
+  </div>
+<% end %>
