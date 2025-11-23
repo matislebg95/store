@@ -1,0 +1,27 @@
+<h1>Change Email</h1>
+
+<%= form_with model: Current.user, url: settings_email_path do |form| %>
+  <% if form.object.errors.any? %>
+    <div>Error: <%= form.object.errors.full_messages.first %></div>
+  <% end %>
+
+  <br/>
+
+  <div class="container">
+    <%= form.email_field :unconfirmed_email, class: "input", required: true, autocomplete: "New email address" %>
+    <%= form.label :unconfirmed_email, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div class="container">
+    <%= form.password_field :password_challenge, class: "input", required: true, autocomplete: "current-password" %>
+    <%= form.label :password_challenge, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div class="container">
+    <%= form.submit "Update email address" %>
+  </div>
+<% end %>

@@ -1,0 +1,26 @@
+<%= form_with model: [ :store, user ] do |form| %>
+  <div>
+    <%= form.text_field :first_name, class: "input",required: true, autofocus: true, autocomplete: "given-name" %>
+    <%= form.label :first_name, class: "input" %>
+  </div>
+
+  <br/>
+
+  <div>
+    <%= form.text_field :last_name, class: "input", required: true, autocomplete: "family-name" %>
+    <%= form.label :last_name, class: "input" %>
+  </div>
+
+  <br/>
+
+  <div>
+    <%= form.email_field :email_address, class: "input", required: true, autocomplete: "email" %>
+    <%= form.label :email_address, class: "input" %>
+  </div>
+
+  <br/>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

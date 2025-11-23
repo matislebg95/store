@@ -3,11 +3,21 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
   resource :sign_up
   namespace :settings do
+    resource :email, only: [ :show, :update ]
     resource :password, only: [ :show, :update ]
     resource :profile, only: [ :show, :update ]
+    resource :user, only: [ :show, :destroy ]
 
     root to: redirect("/settings/profile")
 
+  end
+
+  namespace :store do
+    resources :users
+  end
+
+  namespace :email do
+    resources :confirmations, param: :token, only: [ :show ]
   end
 
   get "/products", to: "products#index"

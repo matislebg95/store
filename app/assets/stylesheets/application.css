@@ -13,7 +13,8 @@ a:not(:has(img)), a img, button, input, .style_button  {
     line-height: 1;
     border: 2px solid #2c2c2c;
     color: #dddddd;
-    background-color: #303030;
+    background-color: transparent;
+    filter: blur(0px);
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 18px;
     text-decoration: none;
@@ -139,4 +140,8 @@ nav a, nav form {
 }
 nav form button {
     width: 100%;
+}
+
+.settings nav, .settings {
+    margin: 80px 0 0 0;
 }
