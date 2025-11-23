@@ -1,0 +1,29 @@
+<%= form_with model: [ :store, product ], html: { class: "form-container" } do |form| %>
+
+  <div class="container">
+    <%= form.text_field :name, class: "input", required: true %>
+    <%= form.label :name, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div class="container">
+    <%= form.text_field :price_in_cents, class: "input", required: true %>
+    <%= form.label :price_in_cents, class: "label" %>
+  </div>
+
+  <br/>
+
+  <div>
+    <%= form.label :featured_image, class: "style_button" %>
+    <%= form.file_field :featured_image, accept: "image/*", style: "display: none;" %>
+  </div>
+
+  <br/>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
+

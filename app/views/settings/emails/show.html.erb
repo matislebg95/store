@@ -1,6 +1,6 @@
 <h1>Change Email</h1>
 
-<%= form_with model: Current.user, url: settings_email_path do |form| %>
+<%= form_with model: Current.user, url: settings_email_path, html: { class: "form-container" } do |form| %>
   <% if form.object.errors.any? %>
     <div>Error: <%= form.object.errors.full_messages.first %></div>
   <% end %>

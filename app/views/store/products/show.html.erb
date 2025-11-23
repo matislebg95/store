@@ -1,0 +1,22 @@
+<h1><%= @product.name %></h1>
+
+<%= image_tag @product.featured_image if @product.featured_image.attached? %>
+
+<br/> <br/>
+
+<p><%= link_to "Back", store_products_path %></p>
+
+
+<br/> <br/>
+
+<% if authenticated? %>
+  <%= link_to "View in Storefront", @product %>
+
+  <br/> <br/>
+
+  <%= link_to "Edit", edit_store_product_path(@product) %>
+
+  <br/> <br/>
+
+  <%= button_to "Delete", [ :store, @product ], method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+<% end %>

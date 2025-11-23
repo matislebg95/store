@@ -1,4 +1,4 @@
-<%= form_with model: [ :store, user ] do |form| %>
+<%= form_with model: [ :store, user ], html: { class: "form-container" } do |form| %>
   <div>
     <%= form.text_field :first_name, class: "input",required: true, autofocus: true, autocomplete: "given-name" %>
     <%= form.label :first_name, class: "input" %>
